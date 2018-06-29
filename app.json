@@ -1,0 +1,46 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/Publish/Publish",
+    "pages/infoModify/infoModify",
+    "pages/citySelect/citySelect",
+    "pages/profile/profile",
+    "pages/houseInfo/houseInfo",
+    "pages/orderlist/orderlist",
+    "pages/RentHouseInfo/RentHouseInfo",
+    "pages/PublishHouseInfo/PublishHouseInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#72b990",
+    "navigationBarTitleText": "青年短租",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#72b990",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home-actived.png"
+      },
+      {
+        "text": "订单",
+        "pagePath": "pages/orderlist/orderlist",
+        "iconPath": "assets/tabbar/orderlist.png",
+        "selectedIconPath": "assets/tabbar/orderlist-actived.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/profile/profile",
+        "iconPath": "assets/tabbar/profile.png",
+        "selectedIconPath": "assets/tabbar/profile-actived.png"
+      }
+    ]
+  }
+}

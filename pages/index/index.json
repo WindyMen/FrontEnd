@@ -1,0 +1,5 @@
+{
+  "usingComponents" : {
+    "house-item" : "../../Components/HouseItem/HouseItem"
+  }
+}

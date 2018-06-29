@@ -1,0 +1,141 @@
+Page{
+  height: 100%;
+  width: 100%;
+}
+
+.page-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.house-name{
+  display: block;
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+}
+
+.house-pos{
+  height: 50rpx;
+  margin-top: 5px;
+  text-align: left;
+  margin-left: 20rpx;
+}
+
+.house-city{
+  background-color: #72b990;
+  color: white;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  padding: 0;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  margin-right: 15rpx;
+}
+
+.house-address{
+  font-size: 28rpx;
+}
+
+.house-owner{
+  height: 60rpx;
+  margin-top: 15rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx;
+  font-size: 35rpx;
+}
+
+.house-renter{
+  height: 60rpx;
+  margin-top: 15rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+
+.house-owner > text:first-child,
+.house-renter  > text:first-child {
+  position: relative;
+  top: -15rpx;
+}
+
+.house-owner-photo,
+.house-renter-photo{
+  display: inline-block;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
+
+.house-owner-name,
+.house-renter-name{
+  display: inline-block;
+  font-size: 35rpx;
+  position: relative;
+  top: -15rpx;
+}
+
+swiper{
+  width: 100%;
+  height: 400rpx;
+  margin-top: 40rpx;
+  overflow: hidden;
+}
+
+swiper-item > image{
+  width: 100%;
+}
+
+.house-info{
+  display: block;
+  width: 95%;
+  margin: auto;
+  margin-top: 25rpx;
+  font-size: 32rpx;
+  text-indent: 32rpx;
+}
+
+.house-info::first-letter{
+  font-size: 50rpx;
+} 
+
+.house-date,
+.house-price{
+  height: 95rpx;
+  width: 92%;
+  margin: auto;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  position: relative;  
+}
+
+.house-date text:first-child,
+.house-price text:first-child
+{
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.house-start-date,
+.house-end-date{
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #72b990;
+  color: white;
+  text-align: center;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  display: inline-block;
+}
+
+.house-price text:nth-child(2){
+  font-weight: bold;
+  font-size: 40rpx;
+}

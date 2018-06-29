@@ -1,0 +1,28 @@
+  <view class="divLine"></view>
+
+  <view class="top-bar">
+    <text bindtap='navigateToCitySelect'>{{currentLocation}}></text>
+    <picker mode="date" value="{{checkInDate}}" start="{{startDate}}" end="2020-12-31" bindchange="checkInDateChange">
+        住 {{checkInDate}}>
+    </picker>
+    <picker mode="date" value="{{checkOutDate}}" start="{{checkInDate}}" end="2020-12-31" bindchange="checkOutDateChange">
+        离 {{checkOutDate}}>
+    </picker>
+    <text bindtap="search" >搜索</text>
+  </view>
+
+<view class="main-wrapper">
+  <swiper indicator-dots='true' autoplay='true' interval='5000' duration='500' circular="true" indicator-active-color="white">
+      <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+  </swiper> 
+  <view class='outter-container'>
+    <view class='left-column-container'>
+      <house-item wx:if="{{index % 2 === 0}}" wx:for="{{houses}}" wx:key="{{item.id}}" house="{{item}}" data-id="{{item.id}}" bindtap="navigateToHouseInfo"></house-item>
+    </view>
+    <view class='right-column-container'>
+      <house-item wx:if="{{index % 2 === 1}}" wx:for="{{houses}}" wx:key="{{item.id}}" house="{{item}}"data-id="{{item.id}}" bindtap="navigateToHouseInfo"></house-item>
+    </view>
+  </view>
+</view>

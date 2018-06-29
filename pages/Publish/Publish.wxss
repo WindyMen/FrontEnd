@@ -1,0 +1,140 @@
+Page{
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.publish {
+  margin-top: 3% !important;
+}
+
+.row{
+  margin-top: 3%;
+  margin-left: 25rpx;
+  display: block;
+  overflow: hidden;
+}
+
+/*输入项的名字*/
+.name-text{
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+  float: left;
+  margin-top: 5rpx;
+}
+
+/*输入框*/
+.row > input,
+.row > textarea{
+  display: inline-block;
+  width: 595rpx;
+  border: 2rpx #E0E3DA solid;
+}
+
+.row > input{
+  height: 50rpx;
+}
+
+.row > input:hover,
+.row > textarea:hover{
+  border: 2rpx #72b990 solid;
+}
+
+/*两个日期选择器*/
+.row > picker{
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #72b990;
+  color: white;
+  text-align: center;
+  width: 200rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  border: 0.5rpx solid #72bf90;
+}
+
+.to{
+  display: inline-block;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.page-wrapper > button{
+  display: block;
+  width: 85%;
+  margin: auto;
+  color: white;
+  background-color: #72b990;
+  margin-bottom: 50rpx;
+}
+
+/*选择城市按钮*/
+.city-select{
+  background-color: #72b990;
+  color: white;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: inline-block;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+
+/*输入价格*/
+.price-input{
+  width: 150rpx !important;
+  margin-left: 3rpx;
+  margin-right: 3rpx;
+}
+
+/*价格行行内text*/
+.price-inline-text{
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: relative;
+  top: -15rpx;
+}
+
+.picture-container{
+  display: block;
+  width: 710rpx;
+}
+
+.pic-name-text{
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+}
+
+.picture{
+  display: inline-block;
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 15rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+  background-color: #F5F5F5;
+}
+
+.picture > image{
+  width: 220rpx;
+  height: 220rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*添加的图片*/
+.add-image{
+  width: 150rpx !important;
+  height: 150rpx !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

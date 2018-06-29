@@ -1,0 +1,12 @@
+<view class='wrapper'>
+  <image class="image-wrapper" src="{{record.house_photo_src}}" mode="widthFix"></image>
+  <view class='info-wrapper'>
+    <text class="house-name">{{record.house_name}}</text>
+    <view>
+      <text class="brief-info">简介：{{record.info}}</text>
+      <text class='price'>价格：￥{{record.price}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='grayLine'></view>

@@ -1,0 +1,27 @@
+<view class='page-wrapper'>
+  <text class="house-name">{{house_name}}</text>
+  <view class='house-pos'>
+    <text class='house-city'>{{house_city}}</text>
+    <text class="house-address">{{house_address}}</text>
+  </view>
+  <view class='house-owner'>
+    <image class='house-owner-photo' src='{{house_owner_photo}}'></image>
+    <text class='house-owner-name'>{{house_owner_name}}</text>
+  </view>
+
+  <swiper indicator-dots='true' autoplay='true' interval='5000' duration='500' indicator-active-color="white">
+      <swiper-item wx:for="{{house_pics}}" wx:key="{{index}}" bindtap='previewPic' data-index="{{index}}">
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+  </swiper> 
+
+  <text class='house-info'>{{house_info}}</text>
+  <view class='house-date-and-price'>
+    <text>可预订时间：</text>
+    <text class='house-start-date'>{{house_start_date}}</text>
+    至
+    <text class='house-end-date'>{{house_end_date}}</text>
+    <text class='house-price'>￥{{house_price}}</text>
+  </view>
+
+</view>

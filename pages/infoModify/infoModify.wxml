@@ -1,0 +1,12 @@
+<view>
+  <view class='update-item {{ifPhoneTextChosen ? "bottomHighlight" : ""}}'>
+    <text>手机：</text><input placeholder='手机' value='{{phone}}' bindfocus='focusPhone' bindblur='blurPhone' bindinput='phoneChange'/>
+  </view>
+
+  <view class='update-item {{ifEmailTextChosen ? "bottomHighlight" : ""}}'>
+    <text>电子邮箱：</text><input placeholder='电子邮箱' value='{{email}}' bindfocus='focusEmail' bindblur='blurEmail' bindinput='emailChange'/>
+  </view>
+</view>
+<view>
+  <button class="update-button" bindtap="updateProfile">确认修改</button>
+</view>

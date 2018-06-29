@@ -1,0 +1,24 @@
+<view class="divLine"></view>
+
+<view class="top-switch-bar">
+  <view bindtap="changeModeFromPublish" class="left-switch-bar">
+    <text>已租房源</text>
+    <view class='bottom-white-line' wx:if="{{mode === 'rent'}}"></view>
+  </view>
+  <view bindtap="changeModeFromRent" class="right-switch-bar">
+    <text>已发布房源</text>
+    <view class='bottom-white-line' wx:if="{{mode === 'publish'}}"></view>
+  </view>
+</view>
+
+<view class='main-wrapper' wx:if="{{hasOpenid && isAuth}}">
+  <block wx:if="{{mode === 'rent'}}">
+    <orderlist-item wx:for="{{book_records}}" record="{{item}}" data-id="{{item.id}}" wx:key="{{index}}" bindtap="navigateToOrder" ></orderlist-item>
+    <text class='continueText' bindtap='returnToIndex'>继续租房 ></text>
+  </block>
+  <block wx:if="{{mode === 'publish'}}">
+    <published-item wx:for="{{publish_records}}" record="{{item}}" data-id="{{item.id}}" wx:key="{{index}}" bindtap="navigateToPublish" ></published-item>
+    <text class='continueText' bindtap='navigateToPublishHouse'>继续发布 ></text>
+  </block>
+</view>
+

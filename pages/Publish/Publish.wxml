@@ -1,0 +1,43 @@
+<view class='page-wrapper'>
+  <view class='row'>
+    <text class='name-text'>标题：</text><input placeholder='请输入房屋标题' value="{{house_name}}" bindinput="houseNameChange"/>
+  </view>
+  
+  <view class='row'>
+    <text class='name-text'>介绍：</text><textarea placeholder='请输入房屋介绍' maxlength="-1" value="{{house_info}}" bindinput="houseInfoChange"></textarea>
+  </view>
+  
+  <view class='row'>
+    <text class='name-text'>城市：</text><button class='city-select' bindtap='navigateToCitySelect'>{{house_city}}</button>
+  </view>
+  
+  <view class='row'>
+    <text class='name-text'>地址：</text><input placeholder='请输入详细地址' value="{{house_address}}" bindinput="houseAddressChange"/>
+  </view>
+  
+  <view class='row'>
+  <text class='name-text'>日期：</text>
+    <picker mode="date" value="{{BeginDate}}" start="{{BeginDate}}" end="2020-12-31" bindchange="BeginDateChange">
+        {{BeginDate}}
+    </picker>
+    <text class='to'>至</text>
+    <picker mode="date" value="{{EndDate}}" start="{{EndDate}}" end="2020-12-31" bindchange="EndDateChange">
+      {{EndDate}}
+    </picker>
+  </view>
+  <view class='row'>
+    <text class='name-text'>价格：</text><text class='price-inline-text'>￥</text><input class='price-input' bindinput="housePriceChange" value="{{house_price}}"/> <text class='price-inline-text'>/晚</text>
+  </view>
+  <view class='row'>
+    <text class='pic-name-text'>图片：</text>
+    <view class='picture-container'>
+    <view class='picture' wx:for="{{house_pics}}" bindtap='previewPic' data-index="{{index}}" wx:key="{{index}}">
+      <image mode='aspectFill' src='{{house_pics[index]}}'></image>
+    </view>
+    <view class='picture' wx:if="{{house_pics.length < 9}}" bindtap="addPics">
+      <image class='add-image' mode='widthFix' src='../../assets/publish/add.png' ></image>
+    </view>
+    </view>
+  </view>
+  <button class="publish" bindtap="publish">确认发布</button>
+</view>

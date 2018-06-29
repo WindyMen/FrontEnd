@@ -1,0 +1,26 @@
+<!--pages/profile/profile.wxml-->
+<view class="userinfo-wrapper">
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 允许获取你的信息 </button>
+<block wx:else>
+  <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}'></image>
+  <view class='userinfo-text'>
+    <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+    <text class='userinfo-phone' >手机：{{phone}}</text>
+    <text class='userinfo-email' >电子邮箱：{{email}}</text>
+  </view>
+  <image bindtap="navigateToInfoModify" class='userinfo-setting' src="../../assets/profile/setting.png"></image>
+</block>
+</view>
+
+<view wx:if="{{hasUserInfo}}" class='userlist-wrapper'>
+  <view class="row" bindtap="navigateToOrderlist">
+    <image class='order-image' src="../../assets/profile/mylist.png" mode='widthFix'></image>
+    <image class='arrow-image' src='../../assets/profile/arrow.png' mode='widthFix'></image>
+    <text>我的订单</text>
+  </view>
+  <view class="row" bindtap="navigateToPublishHouse">
+    <image class='edit-image' src="../../assets/profile/edit.png" mode='widthFix'></image>
+    <image class='arrow-image' src='../../assets/profile/arrow.png' mode='widthFix'></image>
+    <text>发布房源</text>
+  </view>
+</view>

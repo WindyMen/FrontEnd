@@ -1,0 +1,7 @@
+<!--Components/HouseItem/HouseItem.wxml-->
+<view class='wrapper'>
+  <image class='image-wrapper' src='{{house.photo1}}' mode="widthFix"></image>
+  <image class='usr-photo-wrapper' src='{{house.owner_src}}'></image>
+  <view class='house-name'>{{house.title}}</view>
+  <view class='house-price'>￥{{house.price}}</view>
+</view>
